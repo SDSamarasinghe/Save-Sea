@@ -7,13 +7,13 @@ const AdminViewPost = () => {
   const [adsr, setAdsr] = useState(undefined);
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/api/Ads/all`).then((res) => {
+    axios.get(`http://localhost:8000/api/CM/all`).then((res) => {
       setAdsr(res.data);
     });
   }, []);
 
   const onDelete = (id) => {
-    axios.delete(`http://localhost:8000/api/Ads/${id}`).then((res) => {
+    axios.delete(`http://localhost:8000/api/CM/${id}`).then((res) => {
       alert("Advertisement deleted successfully!");
     });
   };
@@ -24,9 +24,9 @@ const AdminViewPost = () => {
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Type</th>
-            <th scope="col">Price(Rs.)</th>
-            <th scope="col">Size(Purches)</th>
+            <th scope="col">Topic</th>
+            <th scope="col">Description</th>
+            <th scope="col">imageURL</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
@@ -37,26 +37,18 @@ const AdminViewPost = () => {
                 <th scope="row">{index + 1}</th>
                 <td>
                   <Link
-                    to={`/Ads/Ad/${adr._id}/${adr.town}/${adr.AgentRef}/${
-                      adr.heading
-                    }/${adr.description}/${adr.sizeOfArea}/${adr.priceRate}/${
-                      adr.contactName
-                    }/${adr.email}/${adr.phone}/${encodeURIComponent(adr.img)}`}
+                    to={`/CM/post/${adr._id}/${adr.topic}/${adr.description}/${encodeURIComponent(adr.img)}`}
                     style={{ textDecoration: "none" }}
                   >
-                    {adr.type}
+                    {adr.topic}
                   </Link>
                 </td>
-                <td>{adr.priceRate}</td>
-                <td>{adr.sizeOfArea}</td>
+                <td>{adr.description}</td>
+                <td>{adr.img}</td>
                 <td>
                   <Link
                     className="btn btn-warning"
-                    to={`/Ads/edit/${adr._id}/${adr.town}/${adr.AgentRef}/${
-                      adr.heading
-                    }/${adr.description}/${adr.sizeOfArea}/${adr.priceRate}/${
-                      adr.contactName
-                    }/${adr.email}/${adr.phone}/${encodeURIComponent(adr.img)}`}
+                    to={`/CM/edit/${adr._id}/${adr.topic}/${adr.description}/${encodeURIComponent(adr.img)}`}
                   >
                     <i className="fas fa-edit"></i>&nbsp;Edit
                   </Link>
@@ -77,10 +69,10 @@ const AdminViewPost = () => {
       <button className="btn btn-success">
         {" "}
         <Link
-          to="/CM/postform"
+          to="/postform"
           style={{ extDecoration: "none", color: "white" }}
         >
-          Create New Advertisment
+          Create New Post
         </Link>
         <br />
       </button>

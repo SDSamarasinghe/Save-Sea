@@ -10,15 +10,8 @@ class AdminUpdatePost extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      town: "",
-      AgentRef: "",
-      heading: "",
+      topic: "",
       description: "",
-      sizeOfArea: "",
-      priceRate: "",
-      contactName: "",
-      email: "",
-      phone: "",
       img: "",
     };
   }
@@ -38,63 +31,36 @@ class AdminUpdatePost extends Component {
     const id = this.props.params.id;
 
     const {
-      town,
-      AgentRef,
-      heading,
+      topic,
       description,
-      sizeOfArea,
-      priceRate,
-      contactName,
-      email,
-      phone,
       img,
     } = this.state;
 
     const data = {
-      town: town,
-      AgentRef: AgentRef,
-      heading: heading,
+      topic: topic,
       description: description,
-      sizeOfArea: sizeOfArea,
-      priceRate: priceRate,
-      contactName: contactName,
-      email: email,
-      phone: phone,
       img: img,
     };
     console.log(data);
 
-    axios.put(`http://localhost:8000/api/Ads/${id}`, data).then((res) => {
-      alert("Ad updated successfully!");
-      window.location.href = "/Ads/AdminView";
+    axios.put(`http://localhost:8000/api/CM/${id}`, data).then((res) => {
+      alert("Post updated successfully!");
+      window.location.href = "/CM/AdminViewPost";
     });
   };
 
   componentDidMount() {
     const {
-      town,
-      agentRef,
-      heading,
+      topic,
       description,
-      sizeofArea,
-      priceRate,
-      contactName,
-      email,
-      phone,
-      image,
+      img,
+
     } = this.props.params;
 
     this.setState({
-      town: town,
-      AgentRef: agentRef,
-      heading: heading,
+      topic: topic,
       description: description,
-      sizeOfArea: sizeofArea,
-      priceRate: priceRate,
-      contactName: contactName,
-      email: email,
-      phone: phone,
-      img: image,
+      img: img,
     });
   }
 
@@ -122,40 +88,20 @@ class AdminUpdatePost extends Component {
           </span>
         </h1>
           <div className="form-group" style={{ marginBottom: "15px" }}>
-          <span class="bg-secondary p-1 px-4 rounded text-white">Town</span>
+          <span class="bg-secondary p-1 px-4 rounded text-white">Topic</span>
             <input
               type="text"
               className="form-control"
-              name="town"
-              placeholder="town"
-              value={this.state.town}
+              name="topic"
+              placeholder="Topic"
+              value={this.state.topic}
               onChange={this.handleInputChange}
             />
           </div>
 
-          <div className="form-group" style={{ marginBottom: "15px" }}>
-          <span class="bg-secondary p-1 px-4 rounded text-white">AgentRef</span>
-            <input
-              type="text"
-              className="form-control"
-              name="AgentRef"
-              placeholder="AgentRef"
-              value={this.state.AgentRef}
-              onChange={this.handleInputChange}
-            />
-          </div>
+         
 
-          <div className="form-group" style={{ marginBottom: "15px" }}>
-          <span class="bg-secondary p-1 px-4 rounded text-white">Heading</span>
-            <input
-              type="text"
-              className="form-control"
-              name="heading"
-              placeholder="heading"
-              value={this.state.heading}
-              onChange={this.handleInputChange}
-            />
-          </div>
+          
 
           <div className="form-group" style={{ marginBottom: "15px" }}>
           <span class="bg-secondary p-1 px-4 rounded text-white">Description</span>
@@ -169,69 +115,9 @@ class AdminUpdatePost extends Component {
               onChange={this.handleInputChange}
             />
           </div>
-
+         
           <div className="form-group" style={{ marginBottom: "15px" }}>
-          <span class="bg-secondary p-1 px-4 rounded text-white">Size of Area</span>
-            <input
-              type="text"
-              className="form-control"
-              name="sizeOfArea"
-              placeholder="sizeOfArea"
-              value={this.state.sizeOfArea}
-              onChange={this.handleInputChange}
-            />
-          </div>
-
-          <div className="form-group" style={{ marginBottom: "15px" }}>
-          <span class="bg-secondary p-1 px-4 rounded text-white">Price Rate</span>
-            <input
-              type="text"
-              className="form-control"
-              name="priceRate"
-              placeholder="priceRate"
-              value={this.state.priceRate}
-              onChange={this.handleInputChange}
-            />
-          </div>
-
-          <div className="form-group" style={{ marginBottom: "15px" }}>
-          <span class="bg-secondary p-1 px-4 rounded text-white">Contact Name</span>
-            <input
-              type="text"
-              className="form-control"
-              name="contactName"
-              placeholder="contactName"
-              value={this.state.contactName}
-              onChange={this.handleInputChange}
-            />
-          </div>
-
-          <div className="form-group" style={{ marginBottom: "15px" }}>
-          <span class="bg-secondary p-1 px-4 rounded text-white">Email</span>
-            <input
-              type="email"
-              className="form-control"
-              name="email"
-              placeholder="email"
-              value={this.state.email}
-              onChange={this.handleInputChange}
-            />
-          </div>
-
-          <div className="form-group" style={{ marginBottom: "15px" }}>
-          <span class="bg-secondary p-1 px-4 rounded text-white">Phone</span>
-            <input
-              type="text"
-              className="form-control"
-              name="phone"
-              placeholder="phone"
-              value={this.state.phone}
-              onChange={this.handleInputChange}
-            />
-          </div>
-
-          <div className="form-group" style={{ marginBottom: "15px" }}>
-          <span class="bg-secondary p-1 px-4 rounded text-white">Image</span>
+          <span class="bg-secondary p-1 px-4 rounded text-white">ImageURL</span>
             <input
               type="text"
               className="form-control"
