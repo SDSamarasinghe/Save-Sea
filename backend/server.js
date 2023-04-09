@@ -49,7 +49,13 @@ app.get("/", (req, res) => {
   res.status(200).json({ messsage: "Server is running!" });
 });
 
-//app.use("/api/Posts", require("./routes/PostsRoutes"));
+
+
+// Implement the routes from here
+app.use("/api/ChallengeManagement", require("./routes/ChallengeManagementRoutes"));
+
+
+
 
 app.listen(PORT, () => {
   logger.info(`Server is running on PORT: ${PORT}`);
