@@ -4,9 +4,10 @@ const logger = require("pino")();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const expressSession = require("express-session");
+const eventModel = require('./models/ChallengeManagementModel')
 
 // Import routes to here
-
+const CMRoute = require("./routes/ChallengeManagementRoutes");
 //const AdsRoutes = require("./routes/PostsRoutes");
 
 
@@ -52,9 +53,7 @@ app.get("/", (req, res) => {
 
 
 // Implement the routes from here
-app.use("/api/ChallengeManagement", require("./routes/ChallengeManagementRoutes"));
-
-
+app.use("/api/CM", CMRoute);
 
 
 app.listen(PORT, () => {
