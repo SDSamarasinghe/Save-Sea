@@ -7,7 +7,22 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [passwordsMatch, setPasswordsMatch] = useState(false);
   const navigate = useNavigate();
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleConfirmPasswordChange = (event) => {
+    setConfirmPassword(event.target.value);
+    if (event.target.value === password) {
+      setPasswordsMatch(true);
+    } else {
+      setPasswordsMatch(false);
+    }
+  };
 
   const onRegister = async () => {
     const user = {
@@ -96,6 +111,21 @@ const Register = () => {
               <small id="emailHelp" className="form-text">
                 Your password will be encrypted automatically
               </small>
+            </div>
+
+            <div className="mb-3">
+              <label for="exampleInputPassword1" className="form-label">
+              Confirm Password:
+              </label>
+              <input
+                type="password"
+                className="form-control"
+                style={{ width: "600px" }}
+                value={confirmPassword}
+                onChange={handleConfirmPasswordChange}
+              />
+              <br />
+            {passwordsMatch ? <p>Passwords match!</p> : <p>Passwords do not match.</p>}   
             </div>
 
             <button

@@ -50,7 +50,7 @@ const Login = () => {
 
             <div className="mb-3">
               <label for="exampleInputEmail1" className="form-label">
-                Email address
+                Username
               </label>
               <input
                 type="email"
