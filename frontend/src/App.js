@@ -11,6 +11,7 @@ import PostForm from "./components/ChallengeManagement/PostForm";
 import AdminView from "./components/ChallengeManagement/AdminViewPost";
 import AdminUpdate from "./components/ChallengeManagement/AdminUpdatePost"
 import DisplayAd from "./components/ChallengeManagement/DisplayAd";
+import PropertyCatalog from "./components/ChallengeManagement/PropertyCatalog";
 
 
 
@@ -42,6 +43,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<Register />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/CM/properties" element={<PropertyCatalog />} />
       </Routes>
       <Footer />
     </BrowserRouter>

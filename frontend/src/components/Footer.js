@@ -38,12 +38,11 @@ function Footer() {
             <div className="col-md-5 mb-md-0 mb-3 text-start">
               <h5 className="text-uppercase font-weight-bold">About</h5>
               <small>
-                Welcome to AgroTech LLC, your number one source for all things
-                agricultural. We're dedicated to providing you the best of
-                agricultural product, with a focus on dependability. customer
-                service, and farmer support. We're working to turn our passion
-                for agricultural products into a booming online store. We hope
-                you enjoy our products as much as we enjoy offering them to you.
+              Save Sea is a project aimed at addressing the problem of plastic waste in our oceans. 
+              It is a web-based platform that provides a user-friendly interface for people to report plastic pollution sightings, 
+              which are then plotted on a map for everyone to see. 
+              By raising awareness of plastic pollution and encouraging individuals to take action, 
+              Save Sea hopes to reduce the amount of plastic waste in our oceans and protect marine life.
               </small>
             </div>
           </div>
