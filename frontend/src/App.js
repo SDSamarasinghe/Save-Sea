@@ -13,6 +13,10 @@ import AdminUpdate from "./components/ChallengeManagement/AdminUpdatePost"
 import DisplayAd from "./components/ChallengeManagement/DisplayAd";
 import PropertyCatalog from "./components/ChallengeManagement/PropertyCatalog";
 
+import AdminViewUsers from "./components/Users/AdminViewUser";
+import AdminUpdateUsers from "./components/Users/AdminUpdateUser";
+
+
 
 
 
@@ -32,11 +36,11 @@ function App() {
         <Route path="/adminview" element={<AdminView />} />
         
         <Route
-          path="/CM/edit/:id/:topc/:descrption/:image"
+          path="/CM/edit/:id/:topic/:descrption/:image"
           element={<AdminUpdate />}
         />
         <Route
-          path="/CM/post/:id/:topc/:descrption/:image"
+          path="/CM/post/:id/:topic/:descrption/:image"
           element={<DisplayAd />}
         />
 
@@ -44,6 +48,15 @@ function App() {
         <Route path="/sign-up" element={<Register />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/CM/properties" element={<PropertyCatalog />} />
+
+        <Route path="/adminviewuser" element={<AdminViewUsers />} />
+
+        <Route
+          path="/users/edit/:id/:full_name/:email/:password"
+          element={<AdminUpdate />}
+        />
+
+       
       </Routes>
       <Footer />
     </BrowserRouter>

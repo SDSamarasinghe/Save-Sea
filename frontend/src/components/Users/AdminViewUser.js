@@ -3,17 +3,17 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "./Admins.css";
 
-const AdminViewPost = () => {
-  const [adsr, setAdsr] = useState(undefined);
+const AdminViewUser = () => {
+  const [adsr, setUsersr] = useState(undefined);
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/api/CM/all`).then((res) => {
-      setAdsr(res.data);
+    axios.get(`http://localhost:8000/api/users/all`).then((res) => {
+      setUsersr(res.data);
     });
   }, []);
 
   const onDelete = (id) => {
-    axios.delete(`http://localhost:8000/api/CM/${id}`).then((res) => {
+    axios.delete(`http://localhost:8000/api/users/${id}`).then((res) => {
       alert("Advertisement deleted successfully!");
     });
   };
@@ -24,9 +24,9 @@ const AdminViewPost = () => {
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Topic</th>
-            <th scope="col">Description</th>
-            <th scope="col">imageURL</th>
+            <th scope="col">FullName</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
@@ -37,18 +37,18 @@ const AdminViewPost = () => {
                 <th scope="row">{index + 1}</th>
                 <td>
                   <Link
-                    to={`/CM/post/${adr._id}/${adr.topic}/${adr.description}/${encodeURIComponent(adr.img)}`}
+                    to={`/users/post/${adr._id}/${adr.full_name}/${adr.email}/${adr.password}`}
                     style={{ textDecoration: "none" }}
                   >
-                    {adr.topic}
+                    {adr.full_name}
                   </Link>
                 </td>
-                <td>{adr.description}</td>
-                <td>{adr.img}</td>
+                <td>{adr.email}</td>
+                <td>{adr.password}</td>
                 <td>
                   <Link
                     className="btn btn-warning"
-                    to={`/CM/edit/${adr._id}/${adr.topic}/${adr.description}/${encodeURIComponent(adr.img)}`}
+                    to={`/users/edit/${adr._id}/${adr.full_name}/${adr.email}/${adr.password}`}
                   >
                     <i className="fas fa-edit"></i>&nbsp;Edit
                   </Link>
@@ -69,10 +69,10 @@ const AdminViewPost = () => {
       <button className="btn btn-success">
         {" "}
         <Link
-          to="/postform"
+          to="/sign-up"
           style={{ extDecoration: "none", color: "white" }}
         >
-          Create New Post
+          Register New User
         </Link>
         <br />
       </button>
@@ -80,4 +80,4 @@ const AdminViewPost = () => {
     </div>
   );
 };
-export default AdminViewPost;
+export default AdminViewUser;
