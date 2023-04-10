@@ -15,10 +15,10 @@ const Navigator = () => {
       </div>
 
       <header className="site-navbar" role="banner">
-        <div style={{ backgroundColor: "#12af39" }} className="px-3">
+        <div style={{ backgroundColor: "#4E5180" }} className="px-3">
           <div className="align-items-center justify-content-between d-flex">
             <div className="">
-              <h1 className="mb-0 site-logo text-white">Agrotec</h1>
+              <h1 className="mb-0 site-logo text-white">Save Sea</h1>
             </div>
             <div className="d-none d-xl-block  ">
               <nav
@@ -39,89 +39,87 @@ const Navigator = () => {
                     </a>
                     <ul className="dropdown arrow-top">
                       <li>
-                        <Link to="/store">
-                          <a>Store</a>
+                        <Link to="/">
+                          <a>1</a>
                         </Link>
                       </li>
                       <li>
-                        <Link to="/Ulabs">
-                          <a>Labs</a>
+                        <Link to="/">
+                          <a>2</a>
                         </Link>
                       </li>
                       <li>
-                        <Link to="/coursehome">
-                          <a>Education</a>
+                        <Link to="/">
+                          <a>3</a>
                         </Link>
                       </li>
                       <li>
-                        <Link to="/HHome">
-                          <a>Healthcare</a>
+                        <Link to="/">
+                          <a>4</a>
                         </Link>
                       </li>
                       <li>
-                        <Link to="/CareerHome">
-                          <a>Career Management</a>
+                        <Link to="/">
+                          <a>5</a>
                         </Link>
                       </li>
                       <li>
-                        <Link to="/Ads/propertiess">
-                          <a>Lands</a>
+                        <Link to="/">
+                          <a>6</a>
                         </Link>
                       </li>
                       <li>
-                        <Link to="/productSee">
-                          <a>Products Management</a>
+                        <Link to="/">
+                          <a>7</a>
                         </Link>
                       </li>
                       <li>
-                        <Link to="/events/home">
-                          <a>Events</a>
+                        <Link to="/">
+                          <a>8</a>
                         </Link>
                       </li>
                       <li className="has-children">
                         <Link to="/">Services</Link>
-                        <a href="#">
-                          Admins <i class="fa-solid fa-caret-down"></i>
-                        </a>
+                        
                         <ul className="dropdown">
                           <li>
-                            <Link to="/courseadmin">
-                              <a>Course Admin</a>
+                            <Link to="/">
+                              <a> Admin1</a>
                             </Link>
                           </li>
                           <li>
-                            <Link to="/store/store-admin-orders">
-                              <a>Store Orders Admin</a>
+                            <Link to="/">
+                              <a>  Admin2</a>
                             </Link>
                           </li>
                           <li>
-                            <Link to="/store/store-admin-payments">
-                              <a>Store Payments Admin</a>
+                            <Link to="/">
+                              <a>  Admin3</a>
                             </Link>
                           </li>
                           <li>
-                            <Link to="/VacancyAdmin">
-                              <a>Vacancy Admin</a>
+                            <Link to="/">
+                              <a> Admin4</a>
                             </Link>
                           </li>
                           <li>
-                            <Link to="/GuidanceAdmin">
-                              <a>Guidance Admin</a>
+                            <Link to="/">
+                              <a> Admin5</a>
                             </Link>
                           </li>
                           <li>
-                            <Link to="/ApplyVacancyAdmin">
-                              <a>Apply Vacancy Admin</a>
+                            <Link to="/">
+                              <a>  Admin6</a>
                             </Link>
                           </li>
                           <li>
-                            <Link to="/ApplyGuidanceAdmin">
-                              <a>Apply Guidamce Admin</a>
+                            <Link to="/">
+                              <a>  Admin7</a>
                             </Link>
                           </li>
                           <li>
-                            <Link to="/CandidateAdmin">
-                              <a>Candidate Admin</a>
+                            <Link to="/">
+                              <a> Admin8</a>
                             </Link>
                           </li>
                         </ul>

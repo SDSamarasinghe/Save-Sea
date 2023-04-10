@@ -13,6 +13,13 @@ import AdminUpdate from "./components/ChallengeManagement/AdminUpdatePost"
 import DisplayAd from "./components/ChallengeManagement/DisplayAd";
 
 
+
+
+import Login from "./components/Users/Login";
+import Register from "./components/Users/Register";
+import Profile from "./components/Users/Profile";
+
+
 function App() {
   useEffect(() => {}, []);
 
@@ -31,6 +38,10 @@ function App() {
           path="/CM/post/:id/:topc/:descrption/:image"
           element={<DisplayAd />}
         />
+
+        <Route path="/login" element={<Login />} />
+        <Route path="/sign-up" element={<Register />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
       <Footer />
     </BrowserRouter>

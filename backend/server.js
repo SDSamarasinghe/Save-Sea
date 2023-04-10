@@ -8,6 +8,7 @@ const eventModel = require('./models/ChallengeManagementModel')
 
 // Import routes to here
 const CMRoute = require("./routes/ChallengeManagementRoutes");
+const userRoutes = require("./routes/userManageRoutes");
 //const AdsRoutes = require("./routes/PostsRoutes");
 
 
@@ -54,6 +55,7 @@ app.get("/", (req, res) => {
 
 // Implement the routes from here
 app.use("/api/CM", CMRoute);
+app.use("/api/users", userRoutes);
 
 
 app.listen(PORT, () => {
