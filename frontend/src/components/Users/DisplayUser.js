@@ -50,21 +50,39 @@ render() {
       <button class="btn btn-secondary"> 
       <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" />
       </button>
-       <span class="name mt-3">{this.state.full_name}</span> 
-       <span class="idd">{this.state.email}</span>
+       <span class="name mt-3"><input
+              type="text"
+              className="form-control"
+              name="description"
+              placeholder="description"
+              value={this.state.full_name}
+              onChange={this.handleInputChange}
+            /></span> 
+       <span class="name mt-3"><input
+              type="text"
+              className="form-control"
+              name="description"
+              placeholder="description"
+              value={this.state.email}
+              onChange={this.handleInputChange}
+            /></span> 
         <div class="d-flex flex-row justify-content-center align-items-center gap-2">
-           <span class="idd1">Oxc4c16a645_b21a</span> 
-           <span><i class="fa fa-copy"></i></span>
+          
             </div>
              <div class="d-flex flex-row justify-content-center align-items-center mt-3">
-               <span class="number">1069 <span class="follow">Followers</span>
-               </span> 
                </div> 
                <div class=" d-flex mt-2">
-                 <button class="btn1 btn-dark">Edit Profile</button>
+               <button
+            className="btn btn-warning"
+            type="submit"
+            style={{ marginTop: "15px",marginBottom:"30px" }}
+            onClick={this.onSubmit}
+          >
+            <i className="far fa-check-square"></i>
+            &nbsp; Update
+          </button>
                   </div> 
                   <div class="text mt-3">
-                     
                      
                       </div>
                        <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> 
