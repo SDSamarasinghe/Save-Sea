@@ -10,8 +10,8 @@ import Footer from "./components/Footer";
 import PostForm from "./components/ChallengeManagement/PostForm";
 import AdminView from "./components/ChallengeManagement/AdminViewPost";
 import AdminUpdate from "./components/ChallengeManagement/AdminUpdatePost"
-import DisplayAd from "./components/ChallengeManagement/DisplayAd";
-import PropertyCatalog from "./components/ChallengeManagement/PropertyCatalog";
+import DisplayAd from "./components/ChallengeManagement/DisplayPost";
+import PropertyCatalog from "./components/ChallengeManagement/PostCatalog";
 
 import AdminViewUsers from "./components/Users/AdminViewUser";
 import AdminUpdateUsers from "./components/Users/AdminUpdateUser";

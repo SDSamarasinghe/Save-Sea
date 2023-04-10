@@ -64,10 +64,10 @@ const PropertyCatalog = () => {
                 return value
             }
         }).map((ad) => (
-    <div className="card" style={{ width: "15rem", margin: "1rem", height:"20rem" }}>
+    <div className="card" style={{ width: "15rem", margin: ".5rem", height:"23rem" }}>
     <div className="card-bodies">
-    <div className="product-image" style={{height:"10rem", marginTop:"10px"}}>
-        <img src={ad.img} alt="product"/>
+    <div className="product-image" style={{height:"15rem", marginTop:"10px"}}>
+        <img src={ad.img} alt="product" width="238px"/>
       </div>
       
       <p className="card-title">{ad.topic}</p>
