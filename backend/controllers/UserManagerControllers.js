@@ -44,8 +44,35 @@ const currentUser = (req, res) => {
   }
 };
 
+const getUser = async (req, res) => {
+  try {
+    const user = await AppUser.find();
+    res.json(user);
+  } catch (error) {
+    res.status(400).json(error);
+  }
+};
+
+const removeUser = async (req, res) => {
+  const UserID = req.params.id;
+
+  try {
+    const ad = await AppUser.findById(UserID);
+    if (!ad) {
+      return res.status(404).json("There is no Users to remove");
+    }
+
+    const removedUsers = await AppUser.findByIdAndDelete(UserID);
+    res.status(200).json(removedUsers);
+  } catch (error) {
+    res.status(400).json(error.message);
+  }
+};
+
 module.exports = {
   registerUser,
+  removeUser,
   loginUser,
+  getUser,
   currentUser,
 };
