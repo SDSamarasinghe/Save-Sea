@@ -4,7 +4,7 @@ import axios from "axios";
 import adformback2 from "./img/adformback2.jpg";
 import swal from "sweetalert";
 
-const AdvertiserForm = () => {
+const PostForm = () => {
   const [listOfAds, setListOfAdvertisement] = useState([]);
   const [topic, setTopic] = useState("");
   const [description, setdescription] = useState("");
@@ -62,14 +62,14 @@ const AdvertiserForm = () => {
       confirmButtonText: "OK",
     }).then(function () {
       // Redirect the user
-      window.location.href = "/Ads/AdminView";
+      window.location.href = "/adminview";
     });
   };
 
   return (
     <div
       style={{
-        backgroundImage: `url(${adformback2})`,
+        backgroundColor: "#131e3a",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
@@ -83,7 +83,7 @@ const AdvertiserForm = () => {
           color: "white",
         }}
       >
-        Advertiser Form
+         Form
       </h1>
       <br />
       <div style={{ backgroundColor: "black" }}></div>
@@ -93,7 +93,7 @@ const AdvertiserForm = () => {
           fontWeight: "bold",
           fontFamily: "sans-serif",
           borderRadius: "30px",
-          border: "3px solid green",
+          border: "3px solid #ffffff",
           margin: "2px",
         }}
       >
@@ -162,13 +162,13 @@ const AdvertiserForm = () => {
 
           <div class="row justify-content-end" id="add-btn">
             <center>
-              <Link to="/Ads/AdminView">
+              <Link to="/adminview">
                 {" "}
                 <button
                   type="button"
                   onClick={handleSubmit}
                   class="btn-block btn-primary"
-                  style={{ backgroundColor: "#1bb004" }}
+                  style={{ backgroundColor: "#0C1559" }}
                 >
                   Submit
                 </button>
@@ -181,4 +181,4 @@ const AdvertiserForm = () => {
   );
 };
 
-export default AdvertiserForm;
+export default PostForm;

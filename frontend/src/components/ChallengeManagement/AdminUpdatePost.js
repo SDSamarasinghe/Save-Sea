@@ -83,8 +83,8 @@ class AdminUpdatePost extends Component {
             textAlign: "center",
           }}
         >
-          <span className="p-1 px-4 rounded text-white" style={{backgroundColor:"#76ad3b"}}>
-          Edit Advertisment
+          <span className="p-1 px-4 rounded text-white" style={{backgroundColor:"#3B3E79"}}>
+          Edit Post
           </span>
         </h1>
           <div className="form-group" style={{ marginBottom: "15px" }}>

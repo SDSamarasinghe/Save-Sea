@@ -26,7 +26,7 @@ const AdminViewPost = () => {
             <th scope="col">#</th>
             <th scope="col">Topic</th>
             <th scope="col">Description</th>
-            <th scope="col">imageURL</th>
+            <th scope="col">image</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
@@ -44,7 +44,16 @@ const AdminViewPost = () => {
                   </Link>
                 </td>
                 <td>{adr.description}</td>
-                <td>{adr.img}</td>
+                <td><img
+                        src={adr.img}
+                        style={{
+                          width: "40px",
+                          height: "40px",
+                          objectFit: "cover",
+                          borderRadius: "8px",
+                          marginRight: "20px",
+                        }}
+                      /></td>
                 <td>
                   <Link
                     className="btn btn-warning"

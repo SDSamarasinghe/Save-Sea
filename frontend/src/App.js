@@ -36,11 +36,11 @@ function App() {
         <Route path="/adminview" element={<AdminView />} />
         
         <Route
-          path="/CM/edit/:id/:topic/:descrption/:image"
+          path="/CM/edit/:id/:topic/:description/:img"
           element={<AdminUpdate />}
         />
         <Route
-          path="/CM/post/:id/:topic/:descrption/:image"
+          path="/CM/post/:id/:topic/:description/:img"
           element={<DisplayAd />}
         />
 

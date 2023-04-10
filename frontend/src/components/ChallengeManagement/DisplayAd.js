@@ -48,8 +48,10 @@ render() {
       <div >
           <br/>
           <div class="d-grid gap-2 d-md-block" style={{marginLeft:"-240px"}}>
-  <button class="btn btn-primary" type="button" style={{marginLeft:"22rem", marginBottom:"30px", width:"150px", height:"50px",backgroundColor:"#12af39", fontWeight:"700"}}>Back</button>
-</div>
+            <Link to="/adminview">
+  <button class="btn btn-primary" type="button" style={{marginLeft:"22rem", marginBottom:"30px", width:"150px", height:"50px",backgroundColor:"#0C1559", fontWeight:"700"}}>Back</button>
+
+  </Link></div>
     <div class="text-center" style={{border:"2px solid black", marginRight:"110px",marginLeft:"110px"}}>
     
         <br/>
