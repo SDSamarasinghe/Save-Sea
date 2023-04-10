@@ -37,7 +37,7 @@ const AdminViewUser = () => {
                 <th scope="row">{index + 1}</th>
                 <td>
                   <Link
-                    to={`/users/post/${adr._id}/${adr.full_name}/${adr.email}/${adr.password}`}
+                    to={`/users/user/${adr._id}/${adr.full_name}/${adr.email}/${adr.password}`}
                     style={{ textDecoration: "none" }}
                   >
                     {adr.full_name}
@@ -46,9 +46,9 @@ const AdminViewUser = () => {
                 <td>{adr.email}</td>
                 <td>{adr.password}</td>
                 <td>
-                  <Link
+                <Link
                     className="btn btn-warning"
-                    to={`/users/edit/${adr._id}/${adr.full_name}/${adr.email}/${adr.password}`}
+                    to={`/users/user/${adr._id}/${adr.full_name}/${adr.email}/${adr.password}`}
                   >
                     <i className="fas fa-edit"></i>&nbsp;Edit
                   </Link>

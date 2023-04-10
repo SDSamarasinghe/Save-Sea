@@ -15,6 +15,8 @@ import PropertyCatalog from "./components/ChallengeManagement/PostCatalog";
 
 import AdminViewUsers from "./components/Users/AdminViewUser";
 import AdminUpdateUsers from "./components/Users/AdminUpdateUser";
+import DisplayUser from "./components/Users/DisplayUser";
+import Profile from "./components/Users/Profile";
 
 
 
@@ -22,7 +24,7 @@ import AdminUpdateUsers from "./components/Users/AdminUpdateUser";
 
 import Login from "./components/Users/Login";
 import Register from "./components/Users/Register";
-import Profile from "./components/Users/Profile";
+
 
 
 function App() {
@@ -46,14 +48,24 @@ function App() {
 
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<Register />} />
-        <Route path="/profile" element={<Profile />} />
+        
         <Route path="/CM/properties" element={<PropertyCatalog />} />
 
         <Route path="/adminviewuser" element={<AdminViewUsers />} />
 
         <Route
           path="/users/edit/:id/:full_name/:email/:password"
-          element={<AdminUpdate />}
+          element={<AdminUpdateUsers />}
+        />
+
+        <Route
+          path="/users/user/:id/:full_name/:email/:password"
+          element={<DisplayUser />}
+        />
+
+         <Route
+          path="/users/edit/:id/:full_name/:email/:password"
+          element={<Profile />}
         />
 
        
