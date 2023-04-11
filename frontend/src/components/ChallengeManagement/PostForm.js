@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import adformback2 from "./img/adformback2.jpg";
 import swal from "sweetalert";
 
 const PostForm = () => {
