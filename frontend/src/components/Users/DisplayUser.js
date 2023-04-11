@@ -26,6 +26,30 @@ class DisplayUser extends Component {
     });
   };
 
+  onSubmit = (e) => {
+    e.preventDefault();
+
+    const id = this.props.params.id;
+
+    const {
+      full_name,
+      email,
+      password,
+    } = this.state;
+
+    const data = {
+      full_name: full_name,
+      email: email,
+      password: password,
+    };
+    console.log(data);
+
+    axios.put(`http://localhost:8000/api/users/${id}`, data).then((res) => {
+      alert("User updated successfully!");
+      window.location.href = "/adminviewuser";
+    });
+  };
+
   componentDidMount() {
     const {
       full_name,
@@ -64,6 +88,14 @@ render() {
               name="description"
               placeholder="description"
               value={this.state.email}
+              onChange={this.handleInputChange}
+            /></span> 
+            <span class="name mt-3"><input
+              type="text"
+              className="form-control"
+              name="description"
+              placeholder="description"
+              value={this.state.password}
               onChange={this.handleInputChange}
             /></span> 
         <div class="d-flex flex-row justify-content-center align-items-center gap-2">

@@ -71,6 +71,7 @@ const PostForm = () => {
       style={{
         backgroundColor: "#131e3a",
         backgroundSize: "cover",
+        paddingBottom:"40px",
         backgroundRepeat: "no-repeat",
       }}
     >
@@ -81,25 +82,44 @@ const PostForm = () => {
           fontSize: "100px",
           textAlign: "center",
           color: "white",
+       
         }}
       >
          Form
       </h1>
       <br />
-      <div style={{ backgroundColor: "black" }}></div>
       <div
         className="col-md-8 mt-4 mx-auto"
         style={{
           fontWeight: "bold",
           fontFamily: "sans-serif",
           borderRadius: "30px",
-          border: "3px solid #ffffff",
+        
+          border: "1px solid #ffffff",
           margin: "2px",
         }}
       >
         <br />
-        <form style={{ margin: "20px" }}>
+        <form style={{ margin: "20px",    marginBottom: "50px", }}>
           <br />
+          <div className="form-group my-4">
+            <label className="my-1" style={{ color: "#D3D3D3" }}>
+              Image
+            </label>
+            <input
+              style={{ backgroundColor: "#D3D3D3" }}
+              type="text"
+              className="form-control"
+              placeholder="Image"
+              value={img}
+              required
+              onChange={(e) => {
+                setImg(e.target.value);
+              }}
+            />
+            <p class="alert-txt">{formErrors.img}</p>
+          </div>
+
           <div className="row mb-3">
             <label class="col-sm-2 col-form-label" style={{ color: "#D3D3D3" }}>
               Topic
@@ -135,31 +155,14 @@ const PostForm = () => {
                 className="form-control"
                 required
                 onChange={(e) => {
-                  setdescription(e.target.value);
+                setdescription(e.target.value);
                 }}
               />
               <p class="alert-txt">{formErrors.description}</p>
             </div>
           </div>
           <br />
-          <div className="form-group my-4">
-            <label className="my-1" style={{ color: "#D3D3D3" }}>
-              Image
-            </label>
-            <input
-              style={{ backgroundColor: "#D3D3D3" }}
-              type="text"
-              className="form-control"
-              placeholder="Image"
-              value={img}
-              required
-              onChange={(e) => {
-                setImg(e.target.value);
-              }}
-            />
-            <p class="alert-txt">{formErrors.img}</p>
-          </div>
-
+          
           <div class="row justify-content-end" id="add-btn">
             <center>
               <Link to="/adminview">
@@ -168,7 +171,7 @@ const PostForm = () => {
                   type="button"
                   onClick={handleSubmit}
                   class="btn-block btn-primary"
-                  style={{ backgroundColor: "#0C1559" }}
+                  style={{ backgroundColor: "#0C1559"}}
                 >
                   Submit
                 </button>
